@@ -1,35 +1,50 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+  return(
+    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-xl" id="main-content">
+    <div class="flex flex-col md:flex-row items-center md:items-start">
+
+        <div class="md:w-1/2 mb-6 md:mb-0 pr-0 md:pr-4 text-center md:text-left">
+            <div class="w-16 h-16 bg-gray-300 rounded-full mb-4 mx-auto md:mx-0"></div>
+            <h1 class="text-xl font-semibold mb-2">displayName</h1>
+            <p>bio</p>
+        </div>
+
+
+        <div class="md:w-1/2 text-center md:text-left">
+            <div class="mb-4">
+                <a href="top-level-domain/sigchain" class="text-blue-500 hover:underline">Sigchain</a>
+            </div>
+
+            <div>
+                <div class="mb-2">
+                    <a href="https://twitter.com/user" class="mr-2 hover:underline">
+                        <i class="fab fa-twitter"></i> User
+                    </a>
+                    <a href="https://twitter.com/user/status/someID" class="text-gray-600 hover:underline">proof URL</a>
+                </div>
+
+                <div class="mb-2">
+                    <a href="https://facebook.com/user" class="mr-2 hover:underline">
+                        <i class="fab fa-facebook"></i> User
+                    </a>
+                    <a href="https://facebook.com/posts/someID" class="text-gray-600 hover:underline">proof URL</a>
+                </div>
+
+                <div class="mb-2">
+                    <a href="https://reddit.com/u/user" class="mr-2 hover:underline">
+                        <i class="fab fa-reddit"></i> User
+                    </a>
+                    <a href="https://reddit.com/r/someSubreddit/comments/someID" class="text-gray-600 hover:underline">proof URL</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  ) 
+  }
+
 
 export default App
