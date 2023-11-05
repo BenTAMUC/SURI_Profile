@@ -3,19 +3,17 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // pages
-import Home from "./screens/Home";
-import VCPage from "./screens/VC";
-import Settings from "./screens/Settings";
+import Home from "./Home";
+// import VCPage from "./sigchain"; TODO: once james uploads his page, uncomment this line
 
 // create browser router
 const App = () => (
     <BrowserRouter basename="">
         <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/sigchain" element={<VCPage />} />
+            {/* <Route path="/sigchain" element={<Sigchain />} /> */}
         </Routes>
     </BrowserRouter>
 );
 
-// render app
-ReactDOM.render(<App />, document.getElementById("root"));
+export default App;
