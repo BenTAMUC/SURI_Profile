@@ -1,6 +1,7 @@
 import './App.css'
 import { Link } from 'react-router-dom';
 import IdentityCard from './components/IdentityCard';
+import { useEffect, useState } from 'react';
 
 const did = {
   "@context": [
@@ -57,25 +58,21 @@ const sig = [
     }
 ]
 
-
-
-function readArrayObj() {
-    for(i = 0; i < sig.length; i++){
-        if(sig[i].type === "verify"){
-            
-        }
-    }
-}
-
-const sampleCredential = { // for testing purposes, remove later
-    "serviceName": "Twitter",
-    "link": "https://twitter.com/"
-}
-
 function Home() {
+    const [identitiesList, setidentitiesList] = useState([])
   const displayName = did.subject.name;
   const bio = did.subject.bio;
   const displayImg = did.subject.displayImg;
+
+  useEffect(()=> {
+    for(let i = 0; i < sig.length; i++){
+        if(sig[i].type === "verify"){
+            let list = identitiesList
+            list.push(<IdentityCard credential = {sig[i]}/>)
+            setidentitiesList(list)
+        }
+    }
+    },[])
 
   return(
     <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-xl" id="main-content">
@@ -97,13 +94,10 @@ function Home() {
 
             <div>
                 <ul>
-
+                    {identitiesList}
                 </ul>
             </div>
         </div>
-
-        {/* Identity Card for Testing */}
-        <IdentityCard credential={sampleCredential} />
     </div>
 </div>
   ) 
