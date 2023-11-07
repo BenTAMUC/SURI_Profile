@@ -1,3 +1,4 @@
+import { createElement } from 'react';
 import './App.css'
 import { Link } from 'react-router-dom';
 
@@ -25,6 +26,47 @@ const did = {
 }
 }
 
+const sig = [
+    {
+        "seqno": 1,
+        "type": "genesis",
+        "data": {},
+        "signature": "00a1b2c3d4",
+        "prev": null
+    },
+    {
+        "seqno": 2,
+        "type": "verify",
+        "data": {},
+        "signature": "f1e2d3c4b5",
+        "prev": "00a1b2c3d4"
+    },
+    {
+        "seqno": 3,
+        "type": "verify",
+        "data": {},
+        "signature": "a1b2c3d4e5",
+        "prev": "f1e2d3c4b5"
+    },
+    {
+        "seqno": 4,
+        "type": "revoke",
+        "data": {},
+        "signature": "1a2b3c4d5e",
+        "prev": "a1b2c3d4e5"
+    }
+]
+
+function readArrayObj() {
+    for(i = 0; i < sig.length; i++){
+        if(sig.type == "verify"){
+            const newLi = document.createElement("li");
+            const newCont = document.createTextNode("");
+            newLi.appendChild(newCont);
+        }
+    }
+}
+
 function Home() {
   const displayName = did.subject.name;
   const bio = did.subject.bio;
@@ -49,26 +91,9 @@ function Home() {
             </div>
 
             <div>
-                <div class="mb-2">
-                    <a href="https://twitter.com/user" class="mr-2 hover:underline">
-                        <i class="fab fa-twitter"></i> User
-                    </a>
-                    <a href="https://twitter.com/user/status/someID" class="text-gray-600 hover:underline">proof URL</a>
-                </div>
+                <ul>
 
-                <div class="mb-2">
-                    <a href="https://facebook.com/user" class="mr-2 hover:underline">
-                        <i class="fab fa-facebook"></i> User
-                    </a>
-                    <a href="https://facebook.com/posts/someID" class="text-gray-600 hover:underline">proof URL</a>
-                </div>
-
-                <div class="mb-2">
-                    <a href="https://reddit.com/u/user" class="mr-2 hover:underline">
-                        <i class="fab fa-reddit"></i> User
-                    </a>
-                    <a href="https://reddit.com/r/someSubreddit/comments/someID" class="text-gray-600 hover:underline">proof URL</a>
-                </div>
+                </ul>
             </div>
         </div>
     </div>
