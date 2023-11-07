@@ -1,5 +1,6 @@
 import './App.css'
 import { Link } from 'react-router-dom';
+import IdentityCard from './components/IdentityCard';
 
 const did = {
   "@context": [
@@ -23,6 +24,11 @@ const did = {
     "bio": "I like trains",
     "displayImg": "https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png"
 }
+}
+
+const sampleCredential = { // for testing purposes, remove later
+    "serviceName": "Twitter",
+    "link": "https://twitter.com/"
 }
 
 function Home() {
@@ -71,6 +77,9 @@ function Home() {
                 </div>
             </div>
         </div>
+
+        {/* Identity Card for Testing */}
+        <IdentityCard credential={sampleCredential} />
     </div>
 </div>
   ) 
