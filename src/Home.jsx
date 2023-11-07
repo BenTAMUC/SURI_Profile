@@ -68,7 +68,7 @@ function Home() {
     for(let i = 0; i < sig.length; i++){
         if(sig[i].type === "verify"){
             let list = identitiesList
-            list.push(<IdentityCard credential = {sig[i]}/>)
+            list.push(<li><IdentityCard credential = {sig[i]}/></li>)
             setidentitiesList(list)
         }
     }
@@ -88,8 +88,9 @@ function Home() {
 
 
         <div class="md:w-1/2 text-center md:text-left">
-            <div class="mb-4">
-                <Link to={"Sigchain"} class="text-blue-500 hover:underline">Sigchain</Link>
+            <div class="mb-4 flex-row">
+                <Link to={"Sigchain"} class="text-black hover:underline">Sigchain<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg></Link>
             </div>
 
             <div>
@@ -102,6 +103,7 @@ function Home() {
 </div>
   ) 
 }
+
 
 
 export default Home
