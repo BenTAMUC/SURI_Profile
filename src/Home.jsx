@@ -1,6 +1,6 @@
-import { createElement } from 'react';
 import './App.css'
 import { Link } from 'react-router-dom';
+import IdentityCard from './components/IdentityCard';
 
 const did = {
   "@context": [
@@ -57,14 +57,19 @@ const sig = [
     }
 ]
 
+
+
 function readArrayObj() {
     for(i = 0; i < sig.length; i++){
-        if(sig.type == "verify"){
-            const newLi = document.createElement("li");
-            const newCont = document.createTextNode("");
-            newLi.appendChild(newCont);
+        if(sig[i].type === "verify"){
+            
         }
     }
+}
+
+const sampleCredential = { // for testing purposes, remove later
+    "serviceName": "Twitter",
+    "link": "https://twitter.com/"
 }
 
 function Home() {
@@ -96,6 +101,9 @@ function Home() {
                 </ul>
             </div>
         </div>
+
+        {/* Identity Card for Testing */}
+        <IdentityCard credential={sampleCredential} />
     </div>
 </div>
   ) 
