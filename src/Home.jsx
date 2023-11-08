@@ -82,7 +82,6 @@ function Home() {
     return(
         <div className="main-container" id="main-content">
             <div className="content-wrapper">
-
                 <div className="left-panel">
                     <div className="image-container">
                     <img src={displayImg} alt=""></img>
@@ -90,7 +89,6 @@ function Home() {
                     <h1 className="title">{displayName}</h1>
                     <p className="bio">{bio}</p>
                 </div>
-
                 <div className="right-panel">
                     <div id="link-container">
                         <Link to={"Sigchain"} className="sigchain-link">Sigchain

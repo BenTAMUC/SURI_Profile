@@ -35,30 +35,37 @@ const sig = [
 
 const Sigchain = () => {
     return (
-        <div className="activity-container">
-            <Link to = {"/"}>
-                <h2>Home</h2>
-            </Link>
-            <h3>Activity</h3>
-            <ul>
-                <li className="highlighted">Claimed ownership of Github account</li>
-                <li>Claimed ownership of Twitter account</li>
-                <li>Claimed ownership of Facebook account</li>
-                <li>Claimed ownership of Reddit account</li>
-                <li>Claimed ownership of Keybase account</li>
-                <li>Added a new key</li>
-                <li>Revoked chainlink 2</li>
-            </ul>
-            <h4>Chainlink 1</h4>
-            <div className="payload">
-                <p>Payload:</p>
-                {/* ... Your payload details ... */}
+        <div className="main-container">
+            <div className="main-part2-container">
+                <div className="sig-list-left">
+                        <Link to = {"/"}>
+                            <h2>Home</h2>
+                        </Link>
+
+                        <h3>Sigchain Links</h3>
+
+                        <ul>
+                            <li>soclial proof</li>
+                            <li>soclial proof</li>
+                            <li>soclial proof</li>
+                            <li>soclial proof</li>
+                        </ul>
+                    </div>
+
+                    <div className="chainlink-right">
+                        <h4>Chainlink #</h4>
+
+                        <div className="payload">
+                            <p>Payload:</p>
+                            {/*stuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuf*/}
+                        </div>
+
+                        <div className="signature">
+                            <p>Signature</p>
+                            {/*stuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuf*/}
+                        </div>
+                    </div>
             </div>
-            <div className="signed-payload">
-                <p>Signed payload:</p>
-                {/* ... Your signed payload details ... */}
-            </div>
-            <button>Full JSON Download</button>
         </div>
     );
 }
