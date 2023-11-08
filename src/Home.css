@@ -44,8 +44,8 @@
 }
 
 .image-container {
-    width: 4rem;
-    height: 4rem;
+    width: 5rem;
+    height: 5rem;
     background-color: #FCA5A5; /* Equivalent to bg-red-300 */
     border-radius: 9999px; /* Equivalent to rounded-full */
     margin-bottom: 1rem;
