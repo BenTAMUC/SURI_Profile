@@ -1,11 +1,12 @@
 .main-sig-container{
+    height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex: 1;
     flex-direction: row;
     font-family: Arial, sans-serif;
-    
 }
 
 .main-part2-container{
@@ -15,25 +16,25 @@
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    background-color: yellow;
+    background-color: lightgray;
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .sig-list-left{
-    width: 500px;
+    width: 40%;
     height: 600px;
-    margin-right: 10px;
-    background-color: green;
+    margin-right: 1%;
+    background-color: lightslategray;
     border-radius: 0.5rem;
     padding: 2rem;
 }
 
 .chainlink-right{
-    width: 500px;
+    width: 40%;
     height: 600px;
-    margin-left: 10px;
-    background-color: red;
+    margin-left: 1%;
+    background-color: lightslategray;
     border-radius: 0.5rem;
     padding: 2rem;
 }

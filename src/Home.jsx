@@ -62,11 +62,6 @@ function Home() {
     // useStates
     const [identitiesList, setidentitiesList] = useState([])
 
-    // constants
-    const displayName = did.subject.name;
-    const bio = did.subject.bio;
-    const displayImg = did.subject.displayImg;
-
     // hooks
     useEffect(()=> {
         for(let i = 0; i < sig.length; i++){
@@ -80,15 +75,18 @@ function Home() {
 
     // output
     return(
-        <div className="main-container" id="main-content">
+        <div className="main-container">
+            {/* Page Content Wrapper */}
             <div className="content-wrapper">
+
+                {/* Left Panel */}
                 <div className="left-panel">
-                    <div className="image-container">
-                        <img className="display-image" src={displayImg} alt=""></img>
-                    </div>
-                    <h1 className="title">{displayName}</h1>
-                    <p className="bio">{bio}</p>
+                    <img className="display-image" src={did.subject.displayImg} alt="Profile Image"></img>
+                    <h2 className="name">{did.subject.name}</h2>
+                    <p className="bio">{did.subject.bio}</p>
                 </div>
+
+                {/* Right Panel */}
                 <div className="right-panel">
                     <div id="link-container">
                         <Link to={"Sigchain"} className="sigchain-link">Sigchain
@@ -96,13 +94,13 @@ function Home() {
                             <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
                         </Link>
                     </div>
-
                     <div className="identities-container">
                         <ul className="identities-list">
                             {identitiesList}
                         </ul>
                     </div>
                 </div>
+
             </div>
         </div>
     ) 

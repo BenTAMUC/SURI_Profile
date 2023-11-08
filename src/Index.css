@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Open+Sans&family=Roboto&family=Roboto+Mono:wght@200&display=swap');
+
+#root{
+    height: 100vh;
+    width: 100vw;
+}
+
+html{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
