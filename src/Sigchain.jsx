@@ -35,10 +35,12 @@ const sig = [
 
 const Sigchain = () => {
     return (
-        <div className="main-container">
+        <div className="main-sig-container">
             <div className="main-part2-container">
                 <div className="sig-list-left">
-                        <Link to = {"/"}>
+                        <Link to = {"/"} className="home-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="arrow-size">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
                             <h2>Home</h2>
                         </Link>
 

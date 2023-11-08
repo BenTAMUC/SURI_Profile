@@ -75,7 +75,7 @@ function Home() {
     },[])
 
   return(
-    <div className="main-container" id="main-content">
+    <div className="main-container">
     <div className="content-wrapper">
 
         <div className="left-panel">
