@@ -80,7 +80,7 @@ function Home() {
 
         <div className="left-panel">
             <div className="image-container">
-              <img src={displayImg} alt=""></img>
+              <img className="display-image"src={displayImg} alt=""></img>
             </div>
             <h1 className="title">{displayName}</h1>
             <p className="bio">{bio}</p>

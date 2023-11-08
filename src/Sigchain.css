@@ -1,38 +1,27 @@
-.activity-container {
-    padding: 20px;
+.main-container{
+    height: auto;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
     font-family: Arial, sans-serif;
 }
 
-h2, h3, h4 {
-    margin-bottom: 20px;
+.main-part2-container{
+    height: auto;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex: 1;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+.sig-list-left{
+    background-color: green;
+    float: left;
 }
 
-li {
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
-}
-
-li.highlighted {
-    background-color: #ffeb3b;
-}
-
-.payload, .signed-payload {
-    padding: 10px;
-    margin-top: 20px;
-    border: 1px solid #ddd;
-    background-color: #f5f5f5;
-}
-
-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    border: none;
-    background-color: #4CAF50;
-    color: #fff;
-    cursor: pointer;
+.chainlink-right{
+    background-color: red;
+    float: right;
 }
