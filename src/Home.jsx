@@ -59,51 +59,53 @@ const sig = [
 ]
 
 function Home() {
+    // useStates
     const [identitiesList, setidentitiesList] = useState([])
-  const displayName = did.subject.name;
-  const bio = did.subject.bio;
-  const displayImg = did.subject.displayImg;
 
-  useEffect(()=> {
-    for(let i = 0; i < sig.length; i++){
-        if(sig[i].type === "verify"){
-            let list = identitiesList
-            list.push(<li><IdentityCard credential = {sig[i]}/></li>)
-            setidentitiesList(list)
+    // constants
+    const displayName = did.subject.name;
+    const bio = did.subject.bio;
+    const displayImg = did.subject.displayImg;
+
+    // hooks
+    useEffect(()=> {
+        for(let i = 0; i < sig.length; i++){
+            if(sig[i].type === "verify"){
+                let list = identitiesList
+                list.push(<li><IdentityCard credential = {sig[i]}/></li>)
+                setidentitiesList(list)
+            }
         }
-    }
-    },[])
+        },[])
 
-  return(
-    <div className="main-container" id="main-content">
-    <div className="content-wrapper">
+    // output
+    return(
+        <div className="main-container" id="main-content">
+            <div className="content-wrapper">
+                <div className="left-panel">
+                    <div className="image-container">
+                    <img src={displayImg} alt=""></img>
+                    </div>
+                    <h1 className="title">{displayName}</h1>
+                    <p className="bio">{bio}</p>
+                </div>
+                <div className="right-panel">
+                    <div id="link-container">
+                        <Link to={"Sigchain"} className="sigchain-link">Sigchain
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="arrow-icon">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
+                        </Link>
+                    </div>
 
-        <div className="left-panel">
-            <div className="image-container">
-              <img className="display-image"src={displayImg} alt=""></img>
+                    <div className="identities-container">
+                        <ul className="identities-list">
+                            {identitiesList}
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <h1 className="title">{displayName}</h1>
-            <p className="bio">{bio}</p>
         </div>
-
-        <div className="right-panel">
-            <div id="link-container">
-                <Link to={"Sigchain"} className="sigchain-link">Sigchain
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="arrow-icon">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
-                </Link>
-            </div>
-
-            <div className="identities-container">
-                <ul className="identities-list">
-                    {identitiesList}
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-  ) 
+    ) 
 }
 
 
