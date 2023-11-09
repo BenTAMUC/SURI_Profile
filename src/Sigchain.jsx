@@ -41,7 +41,7 @@ const Sigchain = () => {
                         <Link to = {"/"} className="home-link">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="arrow-size">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
-                            <h2>Home</h2>
+                            <h4>Home</h4>
                         </Link>
 
                         <h3>Sigchain Links</h3>
@@ -55,7 +55,7 @@ const Sigchain = () => {
                     </div>
 
                     <div className="chainlink-right">
-                        <h4>Chainlink #</h4>
+                        <h2>Chainlink #</h2>
 
                         <div className="payload">
                             <p>Payload:</p>
