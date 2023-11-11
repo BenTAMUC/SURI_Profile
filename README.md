@@ -1,6 +1,7 @@
 # SURI Profile
 The web-based profile portion of SURI: a decentralized contacts application.
 This website is responsible for displaying the decentralized identity information associated with your SURI account, such as your verified social media links and user info.
+
 ### How to use
 #### 💻 For developers:
 * clone the repository to your local system and navigate to the folder
